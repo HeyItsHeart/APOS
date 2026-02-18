@@ -1,0 +1,76 @@
+:root {
+  --bg: #0b0f14;
+  --panel: #121826;
+  --red: #e53935;
+  --red-glow: rgba(229, 57, 53, 0.35);
+  --text: #e6e6e6;
+  --muted: #9aa4b2;
+  --border: rgba(255,255,255,0.08);
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #141a24, var(--bg));
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  overflow: hidden;
+}
+
+#desktop {
+  position: absolute;
+  top: 0;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}
+
+#taskbar {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background: var(--panel);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+}
+
+#taskbar button {
+  background: #0f1522;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+#taskbar button:hover {
+  border-color: var(--red);
+  box-shadow: 0 0 8px var(--red-glow);
+}
+
+.window {
+  position: absolute;
+  background: var(--panel);
+  border: 1px solid var(--red);
+  border-radius: 14px;
+  box-shadow: 0 0 20px var(--red-glow);
+  overflow: hidden;
+}
+
+.window-header {
+  background: linear-gradient(180deg, #141a24, #0e1320);
+  padding: 8px;
+  cursor: move;
+  font-weight: bold;
+  color: var(--red);
+  border-bottom: 1px solid var(--border);
+}
+
+.window-content {
+  padding: 10px;
+  height: calc(100% - 36px);
+  overflow: auto;
+}
