@@ -74,3 +74,26 @@ body {
   height: calc(100% - 36px);
   overflow: auto;
 }
+
+#desktop {
+  position: absolute;
+  top: 0;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    135deg,
+    #1a0000,
+    #3b0000,
+    #6e0000,
+    #2a0000
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
