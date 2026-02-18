@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Access Point OS</title>
+<link rel="stylesheet" href="style.css">
+<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+<div id="desktop"></div>
+
+<div id="taskbar">
+  <button onclick="AppManager.open('browser')">Browser</button>
+  <button onclick="AppManager.open('chat')">Chat</button>
+  <button onclick="AppManager.open('terminal')">Terminal</button>
+  <button onclick="AppManager.open('users')">Users</button>
+  <button onclick="AppManager.open('devtools')">Dev</button>
+</div>
+
+<script src="core/kernel.js"></script>
+<script src="core/windowManager.js"></script>
+<script src="core/appManager.js"></script>
+
+<script src="apps/browser.js"></script>
+<script src="apps/chat.js"></script>
+<script src="apps/terminal.js"></script>
+<script src="apps/devtools.js"></script>
+<script src="apps/users.js"></script>
+
+</body>
+</html>
